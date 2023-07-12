@@ -1,0 +1,243 @@
+// Week 2 - Loops
+
+// In the following exercises, you will need to place your code or answer underneath each
+// exercise prompt.
+
+// First try answering these without using references or looking up any information.
+// Then, check your answer by using references and/or running your code.
+// You can run your JS code using the Chrome or Firefox Developer tools, or by using Node.js.
+// Feel free to update your answers if you got them wrong at first -- this exercise is for your own learning.
+// But make sure you understand why the correct answer is right.
+
+// Exercise 1. Write a 'while' loop that prints the integers (whole numbers)
+// between 1 and 5 (inclusive).
+function exercise1 (){
+  let i = 1;
+  while( i <=5)
+    console.log(i)
+  i++
+}
+
+// Exercise 2. Write a 'do while' loop that prints the integers (whole numbers)
+// between 1 and 5 (inclusive).
+
+function exercise2 () {
+  let i = 1
+  do{
+    console.log(i)
+    i++ 
+  }
+    while (i <= 5)
+}
+
+// Exercise 3. Write a 'for' loop that prints the integers (whole numbers)
+// between 1 and 5 (inclusive).
+
+function exercise3(){
+  for(let i = 1; i <=5 ; i++){
+    console.log(i)
+  }
+}
+
+
+
+
+// Exercise 4. Now we want a loop that prints the integers
+// counting DOWN from 10 to 1 (inclusive). Write three loops that do this, to practice
+// writing loops in all 3 ways -- as a 'while', 'do while', and 'for' loop.
+
+function exercise4a() {
+
+  for ( let i = 10 ; i >= 1; i--) {
+    console.log(i);
+  }
+}
+
+function exercise4b(){
+  let i = 10
+  while( i >=1){
+    console.log(i)
+    i--
+  }
+}
+
+function exercise4c(){
+  let i = 10
+  do{
+    console.log(i)
+    i--;
+    }
+    while(i >=1) 
+    }
+// because if you are greater than one but stop at 10 it allows you to decrement
+ 
+
+
+
+// Exercise 5. Write a loop that prints the integers from 7 to 27. Write this
+// loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
+
+function exercise5a() {
+  let i = 7;
+
+  while (i <= 27) {
+    console.log(i);
+    i++;
+  }
+}
+
+// Do while loop
+function exercise5b() {
+  let i = 7;
+
+  do {
+    console.log(i);
+    i++;
+  } while (i <= 27);
+}
+
+// For loop
+function exercise5c() {
+  for (let i = 7; i <= 27; i++) {
+    console.log(i);
+  }
+}
+
+
+
+// Exercise 6. Write a loop that prints numbers between 0 and 100, counting by tens.
+// I.e. it will print 10, then 20, then 30, etc.
+// Write this loop in all 3 ways -- as a 'while', 'do while', and 'for' loop.
+
+function exercise6a(){
+
+  for( let i = 10; i <= 100; i+=10){
+    console.log(i)
+  }
+}
+
+
+function exercise6b() {
+ let i = 10
+  while(i <=100){
+    console.log(i)
+    i+=10
+  }
+}
+
+
+function exercise6c(){
+  let i = 10
+  do{
+    i +=10
+    console.log(i)
+    } 
+    while(i <=100)
+
+}
+ 
+
+
+
+// Exercise 7. Add a comment as to why the following loop is an infinite loop (will
+// run without ever stopping). Then fix the loop so that it stops when
+// counterFour is equal to -100.
+function exercise7() {
+let counterFour = 1;
+while (counterFour > -100) {
+  console.log("HELP ME!");
+  counterFour--;
+}
+}
+// because one can only be greater than -100 , -100 times. so then we can decrement
+
+
+
+// // Exercise 8. Make a variable that contains your favorite integer. Write a loop
+// (your choice which type) that prints the integers from 0 to that number.
+
+function exercise8() {
+  let mine = 8;
+  for (let i = 0; i < mine; i++) {
+    console.log(i);
+  }
+  return mine;
+}
+
+
+// Exercise 9. Make a variable that contains your favorite integer (this time make sure it's
+// less than 100). Write a loop (your choice which type) that prints the integers from 0 to 100.
+// Next to each number it should print "not my favorite number". But next to your favorite
+// number it should print "my favorite number!". Example output (if your favorite number was 2):
+// 0 not my favorite number
+// 1 not my favorite number
+// 2 my favorite number!
+// 3 not my favorite number
+
+function exercise9() {
+  let fav = 75;
+  let i = 0;
+  while (i < 100) {
+    if (i === fav) {
+      console.log(`${i}  my favorite number!`);
+    } else {
+      console.log(`${i}  not my favorite number`);
+    }
+    i++;
+  }
+}
+
+ 
+
+
+
+
+// Exercise 10. In some of the exercises above, we had you write all 3 types of loops, for practice.
+// But in real life, how would you decide which type of loop to use? You might not have an
+// exact answer, but spend a few minutes thinking about the different types of loops and/or
+// doing some research and write down your thoughts in a comment below:
+//
+
+// I think my choice of which type of loop to use would boil down to what information I have about the issues.
+// For example I would ask myself what do I know to be true. Do I need the loop to run until a user enters no to a series of questions? Then I would 
+use a while loop or a do-while loop because I want the loop to run until it becomes false. 
+// If I know that I want to allow 4 attempts until a user then I will use a 4 loop because I do exactly the number of loops I want to run. If I have 
+more information for my issue I may change my decision but I will base my decisions on the info that I have at the time. 
+
+// Exercise 11. Now we'll practice using nested loops (a loop inside another loop)!
+// Update the nested loops below to so that for each value of outsideCounter,
+// the inside loop will show a countdown
+
+/*
+counting down from 0
+*********************************** 
+counting down from 1
+inside 1
+*********************************** 
+counting down from 2
+inside 2
+inside 1
+*********************************** 
+counting down from 3
+inside 3
+inside 2
+inside 1
+*********************************** 
+*/
+
+// for (let outsideCounter = 0; outsideCounter <= 3 ;outsideCounter++ ) {
+//   console.log("counting down from", outsideCounter);
+//   (let insideCounter = outsideCounter; insideCounter >= 0; insideCounter--) 
+//     console.log(`inside ${insideCounter}`);
+//   }
+//   console.log("***********************************");
+// }
+
+// Congrats, you made it to the end!
+// Did you find this easy or hard? If you used references, which ones helped you?
+// Please answer in a comment below.
+
+// I used references in exercise 9 and 11. I used a helpful website:https://www.programiz.com/javascript/while-//
+// loop
+// I needed to really understand the structure of while loops and do while loops to best answer which one to use. 
+// 11 was a bit confusing for me in the wording so I used the same site to help me learn about nested loops. 
