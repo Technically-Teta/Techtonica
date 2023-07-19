@@ -1,0 +1,14 @@
+let bootcamp = {
+  name: "Techtonica",
+  color: "Blue",
+  population: 82
+};
+function printObject(obj) {
+  for( let key in bootcamp){
+    if(bootcamp.hasOwnProperty(key)){
+      console.log(`${key}:${bootcamp[key]}`)
+    }
+  }
+}
+
+printObject(bootcamp); // Question, why does this print with out being console logged?
